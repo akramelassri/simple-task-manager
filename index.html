@@ -1,0 +1,91 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Dynamic Task Manager</h1>
+
+    <main>
+        <section class="tasks-section ongoing">
+
+            <div class="modal">
+                <div class="modal-content">
+                    <label id="action-label" class="modal-label" for="task-name">Task's name</label>
+                    <input type="text" id="task-name">
+                    <label class="modal-label" for="task-priority">Choose task's priority:</label>
+                    <select name="task-priority" class="action-btn" id="task-priority">
+                        <option value="high">High</option>
+                          <option value="medium">Medium</option>
+                          <option value="low">Low</option>
+                    </select>
+                    <div class="modal-btns">
+                        <button class="action-btn confirm-btn">Confirm</button>
+                    <button class="action-btn cancel-btn">Cancel</button>    
+                    </div>
+                </div>
+            </div>
+            <div class="tasks-section-title">
+                <h2>Ongoing Tasks:</h2>
+                <button class='action-btn add-task-btn'>Add a task</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th >Done</th>
+                        <th >Name of task</th>
+                        <th >Priority</th>
+                        <th >Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+            <p class="tasks-ongoing-count">Total count: </p>
+        </section>
+
+        <section class="tasks-section completed">
+            <div class="tasks-section-title">
+                <h2>Completed Tasks:</h2>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th >Done</th>
+                        <th >Name of task</th>
+                        <th >Priority</th>
+                        <th >Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+            <p class="tasks-completed-count">Total count: </p>
+
+        </section>
+    </main>
+    <script src="script.js">
+
+    </script>
+
+
+</body>
+
+</html>
