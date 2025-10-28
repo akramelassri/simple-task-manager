@@ -120,7 +120,7 @@ function renderAllTasks(tasks) {
 
 function getTaskId(object) {
     const parent = object.parentElement.parentElement;
-    return +parent.id.slice(4); // change it to split at -
+    return +parent.id.split('-')[1]; // change it to split at -
 }
 
 document.querySelectorAll('tbody').forEach(e => {
