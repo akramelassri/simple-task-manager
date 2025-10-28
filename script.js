@@ -128,11 +128,7 @@ document.querySelectorAll('tbody').forEach(e => {
         switch (e.target.type) {
             case 'checkbox':
                 const taskId = getTaskId(e.target);
-                tasks.forEach(element => {
-                    if (element.id_task === taskId) {
-                        element.completed = e.target.checked;
-                    }
-                });
+                tasks.find(element => element.id_task === taskId).completed = e.target.checked;
                 renderAllTasks(tasks);
                 break;
             case 'submit':
