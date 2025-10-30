@@ -5,8 +5,6 @@
 Changes to be made to improve code quality
 maybe each td needs to have its own id instead of always checking its parent.parent
 
-innerhtml is known to be dangerous so might aswell switch it with a remove()
-
 third we rerender everything once we make a change it's fine for this but for performance it would nice to only update what's needed tho that seems extremely harder than just rendering everything
 
 */
